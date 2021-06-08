@@ -4,9 +4,16 @@ import initialEmails from './data/emails'
 
 import './App.css'
 
+import { useState } from 'react'
+
 function App() {
-  // Use initialEmails for state
+  const [emails, setEmails] = useState(initialEmails)
+  const [cheked, setChecked] =useState(false)
   console.log(initialEmails)
+
+  const renderEmails = () => {
+    
+  }
 
   return (
     <div className="app">
@@ -39,7 +46,22 @@ function App() {
           </li>
         </ul>
       </nav>
-      <main className="emails">{/* Render a list of emails here */}</main>
+      <main className="emails">
+        <ul>
+        {
+        emails.map(function(email) {
+                return (<li className="email">
+                          <input type="checkbox"/>
+                          <input className="star-checkbox" type="checkbox"/>
+                          <span >{email.sender}</span>
+                          <span className="title">{email.title}</span>
+                  </li>) 
+        })
+        }
+        
+        </ul>
+        
+      </main>
     </div>
   )
 }
