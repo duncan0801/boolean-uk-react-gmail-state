@@ -71,12 +71,13 @@ function App() {
       <main className="emails">
         <ul>
         {emails.map(email => {
-                return (<li className="email">
-                          <input  checked={email.read} onChange={() => toggleRead(email)} type="checkbox"/>
-                          <input className="star-checkbox" type="checkbox" checked={email.starred} onChange={() => toggleStar(email)}/>
-                          <span >{email.sender}</span>
-                          <span className="title">{email.title}</span>
-                  </li>) 
+                return (
+                <li key={email.id.toString()} className="email">
+                  <input  checked={email.read} onChange={() => toggleRead(email)} type="checkbox"/>
+                  <input className="star-checkbox" type="checkbox" checked={email.starred} onChange={() => toggleStar(email)}/>
+                  <span >{email.sender}</span>
+                  <span className="title">{email.title}</span>
+                </li>) 
         })
         }
         </ul>
