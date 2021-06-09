@@ -109,3 +109,30 @@
 .email .star-checkbox:checked::before {
   background-image: url(https://www.gstatic.com/images/icons/material/system/2x/star_googyellow500_20dp.png);
 }
+.createEmailform .emailInput {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  resize: none;
+  background-color: rgba(128, 128, 128, 0.219);
+}
+.createEmailform {
+  margin-top: 10px;;
+  width: 100%;
+  height: 200px;
+  border: 1px rgb(190, 190, 190) solid;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+}
+.createEmailform button {
+  color: white;
+  width: 100px;
+  height: 50px;
+  font-size: 1rem;
+  background-color: rgb(94, 94, 251);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}

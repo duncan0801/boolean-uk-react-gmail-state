@@ -120,6 +120,10 @@ function App() {
           })
         }
         </ul>
+        <form className="createEmailform">
+          <textarea className="emailInput"></textarea>
+          <button type="submit">Send</button>
+        </form>
       </main>
     </div>
   )
