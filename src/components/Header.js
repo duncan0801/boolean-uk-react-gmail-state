@@ -1,4 +1,5 @@
 import './Header.css'
+import emails from '../data/emails'
 
 function Header() {
   return (
@@ -15,7 +16,7 @@ function Header() {
       </div>
 
       <div className="search">
-        <input className="search-bar" placeholder="Search mail" />
+        <input onChange={((e) => setSearchString(e.target.value))} className="search-bar" placeholder="Search mail" />
       </div>
     </header>
   )
